@@ -20,12 +20,12 @@ def main():
                       'predict_local_relations': True, 'predict_global_relations': True,
                       'base_transformer': 'roberta-base', 'lr': 1e-05, 'batch_size': 1, 'accumulation': 4,
                       'device_num': 0, 'sigmoid_threshold': 0.5,
-                      'training_file': '/home/argumentation/reddit-argument-parser/data/all_data_combined_curriculum_v4.pkl',
+                      'training_file': '<file_name.pkl>',
                       'num_epochs': 15, 'increase_token_type': False, 'debug_mode': False, 'run_curriculum': 'C_target_dataset',
                       'n_rerun': 1, 'increase_positional_embeddings': 'true', 'num_workers': 4, 'use_gpu': True,
-                      'pre_training_file': '/home/argumentation/reddit-argument-parser/data/imho_formatted_v1.pkl',
+                      'pre_training_file': '<file_name.pkl>',
                       'pre_train': False, 'pretrained_model': None, 'use_pretrained_base': False,
-                      'curriculum_model': '/home/argumentation/reddit-argument-parser/results/model_backups/curriculum_model_local_global_component_segment/models/dialo_edu_ap_parser_rerun_0_c_local_global_component_segment.pt',
+                      'curriculum_model': '<file_name.pt>',
                       'use_curriculum_base': 'true', 'positive_class_weight': 3.0, 'global_positive_class_weight': 3.0, 'n_examples': None,
                       'experiment_desc': 'local_global_equal_loss_preference_local_global_equal_loss_weight_1650858092',
                       'experiment_number': '13', 'loss_local_rel_head_wt': 0.4, 'loss_local_rel_deprel_wt': 0.022499999999999992,
@@ -33,10 +33,10 @@ def main():
                       'loss_ctx_rel_deprel_wt': 0.01, 'loss_local_rel_head_app_wt': 0.022499999999999992,
                       'loss_segmentation_wt': 0.022499999999999992, 'early_stopping': 2, 'skip_training': False,
                       'run_inference': False, 'train_distributed': False,
-                      'model_name': '/home/argumentation/reddit-argument-parser/results/13/local_global_equal_loss_preference_local_global_equal_loss_weight_1650858092/models/dialo_edu_ap_parser_rerun_0.pt',
-                      'log_name': '/home/argumentation/reddit-argument-parser/results/13/local_global_equal_loss_preference_local_global_equal_loss_weight_1650858092/results/log.json',
+                      'model_name': '<file_name.pt>',
+                      'log_name': '<file_name.json>',
                       'accumulate': 8}
-    model_file = "/home/argumentation/reddit-argument-parser/results/13/local_global_equal_loss_preference_local_global_equal_loss_weight_1650858092/models/dialo_edu_ap_parser_rerun_0_c_target_dataset.pt"
+    model_file = "<file_name.pt>"
     parsing_model = ArgParser(configurations, model_file, evaluate=False, debug=False)
     path = "/home/argumentation/reddit-argument-parser/results/model_backups/"
 

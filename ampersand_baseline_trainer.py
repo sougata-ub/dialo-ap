@@ -238,9 +238,9 @@ def main():
     configuration["output_model_name"] = configuration["base_transformer"] + "_" + configuration["task"] + "_model.pt"
 
     if configuration["task"] in ["component", "inter_relation"]:
-        configuration["pretrained_weights"] = "/home/argumentation/reddit-argument-parser/results/model_backups/bert-base-uncased_imho_pretraining_AMP_replication_epoch_0_ckpt_7.pt"
+        configuration["pretrained_weights"] = '<file_name.pt>'
     else:
-        configuration["pretrained_weights"] = "/home/argumentation/reddit-argument-parser/results/model_backups/bert-base-uncased_qr_pretraining_AMP_replication_epoch_1.pt"
+        configuration["pretrained_weights"] = '<file_name.pt>'
 
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--pretrained_weights", type=str, help="pretrained_weights", default=configuration["pretrained_weights"])

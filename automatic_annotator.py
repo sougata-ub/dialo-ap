@@ -37,17 +37,15 @@ def main():
                       'predict_local_relations': True, 'predict_global_relations': True,
                       'base_transformer': 'roberta-base', 'lr': 1e-05, 'batch_size': 6, 'accumulation': 4,
                       'device_num': device_num, 'sigmoid_threshold': 0.5, 'interpolation': 0.8,
-                      'training_file': '/home/argumentation/reddit-argument-parser/data/all_data_combined_curriculum_v3.pkl',
+                      'training_file':  '<file_name.pkl>',
                       'num_epochs': 15, 'increase_token_type': False, 'debug_mode': False, 'train_distributed': False,
                       'run_curriculum': 'C_target_dataset', 'n_rerun': 1, 'increase_positional_embeddings': True, 'num_workers': 4,
-                      'model_name': '/home/argumentation/reddit-argument-parser/results/-1/1650210467/models/dialo_edu_ap_parser_rerun_0.pt',
-                      'use_gpu': True, 'pre_training_file': '/home/argumentation/reddit-argument-parser/data/imho_formatted_v1.pkl',
-                      'pre_train': False, 'pretrained_model': None, 'use_pretrained_base': False, 'curriculum_model': './results/-1/1650210467/models/dialo_edu_ap_parser_rerun_0_c_target_dataset.pt',
+                      'model_name': '<file_name.pt>',
+                      'use_gpu': True, 'pre_training_file': '<file_name.pkl>',
+                      'pre_train': False, 'pretrained_model': None, 'use_pretrained_base': False, 'curriculum_model': '<file_name.pt>',
                       'use_curriculum_base': True, 'positive_class_weight': 5.0}
 
-    parsing_model = ArgParser(configurations,
-                              "./results/-1/1650210467/models/dialo_edu_ap_parser_rerun_0_c_target_dataset.pt",
-                              evaluate=False)
+    parsing_model = ArgParser(configurations, '<file_name.pt>', evaluate=False)
 
     parsing_model.configuration["predict_global_relations"] = False
     parsing_model.configuration["predict_local_relations"] = False

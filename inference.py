@@ -51,9 +51,6 @@ class Inference(Trainer):
         print("\n:::::STATISTICS:::::\n")
         print(stat_list_df)
         print("=====================================\n")
-        # print("Dumped Stats results to file", self.stats_file, "!!\n")
-        # pickle.dump(additional_data, open(self.inference_file, "wb"))
-        # print("Dumped inference results to file", self.inference_file, "!!")
 
     def inference_predictor_v2(self):
         result_dict = {}
@@ -440,13 +437,6 @@ class Inference(Trainer):
                 else:
                     tmp_glob_dict[(ith, jth_connected)] = {"prob": prob, "rel": rel}
 
-            # for k, v in tmp_glob_dict.items():
-            #     global_txt = self.tokenizer.decode(dct["ctx_input_ids"].squeeze(0)[k[0]], skip_special_tokens=True)
-            #     local_txt = self.tokenizer.decode(dct["pred_dict_new"][k[1]]["tokens"], skip_special_tokens=False)
-            #     local_txt = local_txt.replace("<EDU>", " ").replace("<pad>", "").strip()
-            #     rel = self.label_mapping_rev[v["rel"]]
-            #     adu_edu_global_txt.append([global_txt, local_txt, rel])
-
             for ix, (k, v) in enumerate(tmp_glob_dict.items()):
                 if v["rel"] in [1, 2]:
                     global_txt = self.tokenizer.decode(dct["ctx_input_ids"].squeeze(0)[k[0]], skip_special_tokens=True)
@@ -457,11 +447,6 @@ class Inference(Trainer):
                     global_dct[ix] = {"global_id": k[0], "global_txt": global_txt,
                                       "local_id": k[1], "local_txt": local_txt, "rel": rel}
 
-            # for i in global_pred_rels:
-            #     global_txt = self.tokenizer.decode(dct["ctx_input_ids"][i[0][0]], skip_special_tokens=True)
-            #     local_txt = self.tokenizer.decode(dct["pred_dict_new"][i[0][1]]["tokens"], skip_special_tokens=True)
-            #     rel = self.label_mapping_rev[i[1]]
-            #     adu_edu_global_txt.append([global_txt, local_txt, rel])
         return results, global_dct  # adu_edu_global_txt
 
     def map_golden_pred_adu_spans(self, variable_dict):

@@ -109,15 +109,15 @@ def run_training(N_EPOCHS, trainer, best_valid_loss, model_name, early_stopping,
 
 def main():
     run_time = str(int(time.time()))
-    path_prefix = "/home/argumentation/reddit-argument-parser/"
+    path_prefix = ""  # path of the project
 
     N_EPOCHS = 15
     batch_size = 8
     accumulate = 4
     lr = 1e-5
-    training_file = path_prefix + "data/all_data_combined_curriculum.pkl"
-    pre_training_file = path_prefix + "data/imho_formatted_v1.pkl"
-    stats_file = path_prefix + "results/experiment_stats.csv"
+    training_file = path_prefix + "data/<training file name>"
+    pre_training_file = path_prefix + "data/<file name>"
+    stats_file = path_prefix + "results//<file name.csv>"
     device_num = 0
     in_dim = 768
     out_dim = 600

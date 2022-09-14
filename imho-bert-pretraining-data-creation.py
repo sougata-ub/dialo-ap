@@ -128,8 +128,8 @@ def create_qr_data(raw_file_path, tokenizer, fname):
 
 def main():
     base_transformer = "bert-base-uncased"
-    raw_file_path = "/home/argumentation/imho+context.tsv"
-    pre_processed_file_name = "/home/argumentation/reddit-argument-parser/data/imho+context-" + base_transformer + "_tokenized_dict.pkl"
+    raw_file_path = "/imho+context.tsv"
+    pre_processed_file_name = ".data/imho+context-" + base_transformer + "_tokenized_dict.pkl"
     shard_files = "true"
     dataset = "imho"
 
