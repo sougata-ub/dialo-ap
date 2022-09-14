@@ -23,8 +23,8 @@ While neural approaches to argument mining (AM) have advanced considerably, most
 8. [Persuasive Essays Corpora](https://aclanthology.org/J17-3005/)
 9. [Change My View Corpora/Ampersand](https://aclanthology.org/D19-1291/)
 10. Combined and formatted dataset used in the experiments:
-    (i)   For training Dialo-AP:
-    (ii)  For training Ampersand:
+    1.  For training Dialo-AP:
+    2.  For training Ampersand:
 11. Formatted Change My View dataset used for human evaluation:
 
 ### Models:
