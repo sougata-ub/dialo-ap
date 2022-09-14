@@ -23,15 +23,15 @@ While neural approaches to argument mining (AM) have advanced considerably, most
 8. [Persuasive Essays Corpora](https://aclanthology.org/J17-3005/)
 9. [Change My View Corpora/Ampersand](https://aclanthology.org/D19-1291/)
 10. Combined and formatted dataset used in the experiments:
-    1.  For training Dialo-AP:
-    2.  For training Ampersand:
+    1.  For training Dialo-AP: https://dialo-ap-files.s3.amazonaws.com/all_data_combined_curriculum_v4.5.pkl
+    2.  For training Ampersand: https://dialo-ap-files.s3.amazonaws.com/imho_formatted_v1.pkl
 11. Formatted Change My View dataset used for human evaluation:
 
 ### Models:
-1. Dialo-AP: 
-2. Ampersand recreated BERT trained for Component Classification:
-3. Ampersand recreated BERT trained for Inter-Relationship Prediction:
-4. Ampersand recreated BERT trained for Intra-Relationship Prediction:
+1. Dialo-AP: https://dialo-ap-files.s3.amazonaws.com/dialo_edu_ap_parser_rerun_0_c_target_dataset.pt
+2. Ampersand recreated BERT trained for Component Classification: https://dialo-ap-files.s3.amazonaws.com/bert-base-uncased_imho_component_model.pt
+3. Ampersand recreated BERT trained for Inter-Relationship Prediction: https://dialo-ap-files.s3.amazonaws.com/bert-base-uncased_iqr_inter_model.pt
+4. Ampersand recreated BERT trained for Intra-Relationship Prediction: https://dialo-ap-files.s3.amazonaws.com/bert-base-uncased_imho_intra_model.pt
 
 ### Training and Inference
 You can train and evaluate all experiments using the `runner.sh` script. Example: `nohup bash runner.sh 1 12 > log.txt 2>&1 &` runs experiment numbers 1 to 12 sequentially. All the different configurations for the experiments can be found in the `config.json` file.
