@@ -4,7 +4,7 @@
 
 This is the implementation of the paper:
 
-## [**Dialo-AP: A Dependency Parsing Based Argument Parser for Dialogues**]
+## [**Dialo-AP: A Dependency Parsing Based Argument Parser for Dialogues**](https://aclanthology.org/2022.coling-1.74/)
 [**Sougata Saha**](https://www.linkedin.com/in/sougata-saha-8964149a/), [**Souvik Das**](https://www.linkedin.com/in/souvikdas23/), [**Rohini Srihari**](https://www.acsu.buffalo.edu/~rohini/) 
 
 The 29th International Conference On Computational Linguistics (COLING 2022, Gyeongju, Republic of Korea)
@@ -49,3 +49,21 @@ Prior to training, please download the formatted training dataset into a folder 
 4. parser.py: wrapper class which is used for inference
 5. trainer.py: contains all training related code
 6. run_training.py: parses the parameters used for training
+
+## Citation
+If you are using this library then do cite: 
+```bibtex
+@inproceedings{saha-etal-2022-dialo,
+    title = "Dialo-{AP}: A Dependency Parsing Based Argument Parser for Dialogues",
+    author = "Saha, Sougata  and
+      Das, Souvik  and
+      Srihari, Rohini K.",
+    booktitle = "Proceedings of the 29th International Conference on Computational Linguistics",
+    month = oct,
+    year = "2022",
+    address = "Gyeongju, Republic of Korea",
+    publisher = "International Committee on Computational Linguistics",
+    url = "https://aclanthology.org/2022.coling-1.74",
+    pages = "887--901"
+}
+```
